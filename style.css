@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.main-container {
+    background-color: #111;
+    overflow: hidden;
+}
+
+.greeting {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.greeting-text-container {
+    flex: 3;
+}
+
+
+.greeting-text {
+    color: #333;
+    font-size: 20vw;
+    line-height: 100vh;
+    cursor: default;
+}
+
+.name-section {
+    height: 100vh;
+    background-color:#A6A6A8;
+}
+
+.name {
+    font-size: 12vw;
+    color: #333;
+    cursor: default;
+    text-align: center;
+    line-height: 100vh;
+}
+
+.job-title-section {
+    height: 100vh;
+}
+
+.purple-theme {
+    background:#A6A6A8;
+}
+
+.job-title {
+    font-size: 10vw;
+    color: #333;
+    line-height: 100vh;
+    cursor: default;
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30vh;
+    padding: 0px 100px;
+}
+
+.projects-heading {
+    font-size: 10vw;
+    color: #333;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.project-item:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+
+
+.project-detail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.project-title {
+    font-size: 7vw;
+    color: #555;
+}
+
+.project-description {
+    font-size: 20px;
+    color: #555;
+    text-align: justify;
+    line-height: 40px;
+}
+
+.project-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #555;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-button::after {
+    content: "Check Out";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 1s all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #555;
+    color: #222;
+}
+
+.project-button:hover.project-button::after {
+    transform: translateX(100%);
+}
+
+.laptop-frame {
+    width: 600px;
+    height: 379px;
+    flex: 1;
+    position: relative;
+    background-size: cover;
+}
+
+
+.laptop-app {
+    width: 100%;
+}
+
+.laptop-screen::-webkit-scrollbar {
+    display: none;
+}
+
+.github-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.github-heading {
+    font-size: 100px;
+    color: #333;
+}
+.github-subheading {
+    font-size: 30px;
+    color:#A6A6A8;
+    text-decoration: none;
+}
+
+.github-subheading a {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+
+.github-activity {
+    width: 820px;
+    text-align: center;
+}
+
+.activity-dates {
+    padding: 10px;
+    color: #555;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.activity-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.activity-box {
+    width: 15px;
+    height: 15px;
+    background-color: #171c25;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 3s all ease;
+}
+
+.activity-box.active:nth-child(4n) {
+    background-color: #195b2c;
+}
+
+.github-activity:hover .activity-box.active:nth-child(2n+1) {
+    background-color: #195b2c;
+}
+
+.github-activity:hover .activity-box.active:nth-child(2n) {
+    background-color: #063f24;
+}
+
+.github-profile {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .projects-section {
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .project-item {
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .project-item:nth-child(2n) {
+        flex-direction: column;
+    }
+
+    .laptop-frame {
+        transform: none !important;
+    }
+
+    .github-activity {
+        display: none;
+    }
+
+    .github-heading {
+        text-align: center;
+        font-size: 10vw;
+    }
+}
